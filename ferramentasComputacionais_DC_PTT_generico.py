@@ -52,8 +52,8 @@ for dc in dcList:
 prob.writeLP("DC_PTT_generico.lp")
 
 #Resolvendo o problema
-prob.solve(CPLEX())
-#prob.solve()
+#prob.solve(CPLEX())
+prob.solve()
 
 #Mostrando o estado da solucao
 print("Status:", LpStatus[prob.status])

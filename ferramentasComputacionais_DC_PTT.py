@@ -26,12 +26,12 @@ d_2 = 12000
 prob = LpProblem("2_DCs_e_3_PTTs",LpMinimize)
 
 #Definindo as variaveis
-x_1_1=LpVariable("X_DC_1_PTT_1",0,None,LpContinuous)
-x_1_2=LpVariable("X_DC_1_PTT_2",0,None,LpContinuous)
-x_1_3=LpVariable("X_DC_1_PTT_3",0,None,LpContinuous)
-x_2_1=LpVariable("X_DC_2_PTT_1",0,None,LpContinuous)
-x_2_2=LpVariable("X_DC_2_PTT_2",0,None,LpContinuous)
-x_2_3=LpVariable("X_DC_2_PTT_3",0,None,LpContinuous)
+x_1_1=LpVariable("X_DC_1_PTT_1",0,None,LpInteger)
+x_1_2=LpVariable("X_DC_1_PTT_2",0,None,LpInteger)
+x_1_3=LpVariable("X_DC_1_PTT_3",0,None,LpInteger)
+x_2_1=LpVariable("X_DC_2_PTT_1",0,None,LpInteger)
+x_2_2=LpVariable("X_DC_2_PTT_2",0,None,LpInteger)
+x_2_3=LpVariable("X_DC_2_PTT_3",0,None,LpInteger)
 
 #Declarando a funcao objetivo
 prob += c_1_1*x_1_1 + c_1_2*x_1_2 + c_1_3*x_1_3 + c_2_1*x_2_1 + c_2_2*x_2_2 + c_2_3*x_2_3 ,"Custo"
