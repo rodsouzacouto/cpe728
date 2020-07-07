@@ -38,7 +38,7 @@ variaveisX = LpVariable.dicts("X",(dcList,pttList),0,None,LpContinuous)
 tuplasDCPTT = [(dc,ptt) for dc in dcList for ptt in pttList]
 
 #Declarando a funcao objetivo
-prob += lpSum([variaveisX[dc][ptt]*custos[dc][ptt] for (dc,ptt) in tuplasDCPTT]), "Custo"
+prob += lpSum([custos[dc][ptt]*variaveisX[dc][ptt] for (dc,ptt) in tuplasDCPTT]), "Custo"
 
 #Declarando restricoes dos PTTs
 for ptt in pttList:
